@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
-import { Shirt, Shirt, ShoppingBag, Truck, Store, MessageCircle, Star, ArrowRight } from "lucide-react";
+import { Shirt, ShoppingBag, Truck, Store, MessageCircle, Star, ArrowRight } from "lucide-react";
 
 const categories = [
   {

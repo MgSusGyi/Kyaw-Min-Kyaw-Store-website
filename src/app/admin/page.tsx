@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
-import { LayoutDashboard, Image, MessageCircle, ShoppingBag, Users, ArrowRight } from "lucide-react";
+import { LayoutDashboard, Image, MessageCircle, ShoppingBag, ArrowRight } from "lucide-react";
 
 export default function AdminDashboard() {
   const { user, isAdmin } = useAuth();
