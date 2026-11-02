@@ -50,7 +50,7 @@ export default function AdminDashboard() {
     {
       title: "View Orders",
       desc: `${stats.orders} orders received`,
-      href: "/order",
+      href: "/admin/orders",
       icon: ShoppingBag,
       color: "text-green-400",
     },

@@ -5,19 +5,6 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { Truck, Store, CheckCircle, ShoppingBag } from "lucide-react";
 
-type Order = {
-  id: string;
-  name: string;
-  phone: string;
-  address: string;
-  items: string;
-  notes: string;
-  method: "delivery" | "pickup";
-  userEmail?: string;
-  status: string;
-  createdAt: string;
-};
-
 export default function OrderPage() {
   const { user } = useAuth();
   const router = useRouter();
@@ -30,7 +17,7 @@ export default function OrderPage() {
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [orders, setOrders] = useState<Order[]>([]);
+  const [orders, setOrders] = useState<any[]>([]);
 
   useEffect(() => {
     if (!user) {
@@ -39,10 +26,7 @@ export default function OrderPage() {
     }
     setForm((f) => ({ ...f, name: user.name }));
     const saved = localStorage.getItem("kmk_orders");
-    if (saved) {
-      const parsedOrders: Order[] = JSON.parse(saved);
-      setOrders(parsedOrders);
-    }
+    if (saved) setOrders(JSON.parse(saved));
   }, [user, router]);
 
   const handleSubmit = (e: React.FormEvent) => {

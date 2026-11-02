@@ -140,9 +140,10 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div
+            <Link
               key={cat.id}
-              className="group relative overflow-hidden rounded-2xl glass hover-lift cursor-pointer"
+              href={`/category/${cat.id}`}
+              className="group relative overflow-hidden rounded-2xl glass hover-lift cursor-pointer block"
             >
               <div className="aspect-[4/3] relative overflow-hidden">
                 <img
@@ -160,7 +161,7 @@ export default function HomePage() {
                 <p className="text-sm text-white/60 mb-1">{cat.titleMm}</p>
                 <p className="text-sm text-white/50">{cat.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

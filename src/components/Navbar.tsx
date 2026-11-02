@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 import { usePathname } from "next/navigation";
-import { Menu, X, MessageCircle, ShoppingBag, LogOut, LayoutDashboard } from "lucide-react";
+import { Menu, X, MessageCircle, ShoppingBag, Star, LogOut, User, LayoutDashboard } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
 
